@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ap="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.plot.PlotFragment">
+
+    <LinearLayout
+        android:id="@+id/linear1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        ap:layout_constraintBottom_toTopOf="@id/linear2"
+        ap:layout_constraintTop_toTopOf="parent">
+
+        <com.androidplot.xy.XYPlot
+            android:id="@+id/plot"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            ap:backgroundColor="@color/ap_white"
+            ap:borderColor="@color/ap_black"
+            ap:domainLineColor="@color/ap_black"
+            ap:domainTitle="Date"
+            ap:domainTitleTextColor="@color/ap_black"
+            ap:domainTitleTextSize="20dp"
+            ap:graphAnchor="center"
+            ap:graphBackgroundColor="@color/ap_white"
+            ap:graphHeight="0.8"
+            ap:graphHeightMode="relative"
+            ap:graphHorizontalPosition="0.1"
+
+            ap:graphHorizontalPositioning="relative_from_center"
+            ap:graphMarginBottom="40dp"
+            ap:graphMarginLeft="40dp"
+            ap:graphMarginRight="1dp"
+            ap:graphMarginTop="1dp"
+            ap:graphVerticalPosition="0.5"
+            ap:graphVerticalPositioning="relative_from_top"
+
+            ap:graphWidth="0.9"
+            ap:graphWidthMode="relative"
+            ap:gridBackgroundColor="@color/ap_white"
+            ap:legendAnchor="center"
+            ap:legendHeight="0.2"
+            ap:legendHeightMode="relative"
+            ap:legendHorizontalPosition="0.1"
+
+
+            ap:legendHorizontalPositioning="relative_from_center"
+            ap:legendTextColor="@color/ap_black"
+            ap:legendTextSize="10dp"
+            ap:legendVerticalPosition="0.9"
+            ap:legendVerticalPositioning="relative_from_top"
+            ap:legendWidth="0.8"
+            ap:legendWidthMode="relative"
+            ap:lineLabelAlignBottom="right"
+            ap:lineLabelAlignLeft="right"
+            ap:lineLabelInsetBottom="-7dp"
+
+            ap:lineLabelInsetLeft="1dp"
+            ap:lineLabelRotationBottom="-45"
+            ap:lineLabelTextColorBottom="@color/ap_black"
+            ap:lineLabelTextColorLeft="@color/ap_black"
+            ap:lineLabels="left|bottom"
+            ap:rangeLineColor="@color/ap_black"
+            ap:rangeTitle="Signal Strength (dBm)"
+            ap:rangeTitleTextColor="@color/ap_black"
+            ap:rangeTitleTextSize="20dp"
+            ap:title="Signal Strength History (RF)"
+            ap:titleTextColor="@color/ap_black"
+
+            ap:legendVisible = "false"
+            ap:titleTextSize="20dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linear2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        ap:layout_constraintTop_toBottomOf="@id/linear1"
+        ap:layout_constraintBottom_toBottomOf="parent">
+
+        <com.androidplot.xy.XYPlot
+            android:id="@+id/plot2"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            ap:backgroundColor="@color/ap_white"
+            ap:borderColor="@color/ap_black"
+            ap:domainLineColor="@color/ap_black"
+            ap:domainTitle="Date"
+            ap:domainTitleTextColor="@color/ap_black"
+            ap:domainTitleTextSize="20dp"
+            ap:graphAnchor="center"
+            ap:graphBackgroundColor="@color/ap_white"
+            ap:graphHeight="0.8"
+            ap:graphHeightMode="relative"
+            ap:graphHorizontalPosition="0.1"
+
+            ap:graphHorizontalPositioning="relative_from_center"
+            ap:graphMarginBottom="40dp"
+            ap:graphMarginLeft="40dp"
+            ap:graphMarginRight="1dp"
+            ap:graphMarginTop="1dp"
+            ap:graphVerticalPosition="0.5"
+            ap:graphVerticalPositioning="relative_from_top"
+
+            ap:graphWidth="0.9"
+            ap:graphWidthMode="relative"
+            ap:gridBackgroundColor="@color/ap_white"
+            ap:legendAnchor="center"
+            ap:legendHeight="0.2"
+            ap:legendHeightMode="relative"
+            ap:legendHorizontalPosition="0.1"
+
+
+            ap:legendHorizontalPositioning="relative_from_center"
+            ap:legendTextColor="@color/ap_black"
+            ap:legendTextSize="10dp"
+            ap:legendVerticalPosition="0.9"
+            ap:legendVerticalPositioning="relative_from_top"
+            ap:legendWidth="0.8"
+            ap:legendWidthMode="relative"
+            ap:lineLabelAlignBottom="right"
+            ap:lineLabelAlignLeft="right"
+            ap:lineLabelInsetBottom="-7dp"
+
+            ap:lineLabelInsetLeft="1dp"
+            ap:lineLabelRotationBottom="-45"
+            ap:lineLabelTextColorBottom="@color/ap_black"
+            ap:lineLabelTextColorLeft="@color/ap_black"
+            ap:lineLabels="left|bottom"
+            ap:rangeLineColor="@color/ap_black"
+            ap:rangeTitle="Signal Strength (dBm)"
+            ap:rangeTitleTextColor="@color/ap_black"
+            ap:rangeTitleTextSize="20dp"
+            ap:title="Signal Strength History (GSM)"
+            ap:titleTextColor="@color/ap_black"
+
+            ap:legendVisible = "false"
+            ap:titleTextSize="20dp" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

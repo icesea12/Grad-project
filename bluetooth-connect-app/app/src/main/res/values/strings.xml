@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">BCon</string>
+    <string name="description_navigation_header">Header of the navigation drawer</string>
+    <string name="Logs">Logs</string>
+    <string name="lorem_ipsum">Lorem Ipsum</string>
+    <string name="Bluetooth">Bluetooth</string>
+    <string name="bluetooth_is_off">Bluetooth is off</string>
+    <string name="bluetooth_is_on">Bluetooth is on</string>
+    <string name="gsm_title">GSM</string>
+    <string name="rf_title">RF Reader</string>
+    <string name="critical_value_warning">Critical value! Signal too low!</string>
+    <string name="date_text">Captured at: %s</string>
+    <string name="from_device">From: %s</string>
+    <string name="signal_strength">Signal strength: %s</string>
+    <string name="error_rate">Error rate: %s</string>
+    <string name="discover_new_devices_button">Discover New Devices</string>
+    <string name="show_paired_devices_button">Show paired Devices</string>
+    <string name="bluetooth_off_button">Bluetooth OFF</string>
+    <string name="bluetooth_on_button">Bluetooth ON</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="Plot">Plot</string>
+</resources>

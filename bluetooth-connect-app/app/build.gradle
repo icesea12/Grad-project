@@ -1,0 +1,102 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+apply plugin: "androidx.navigation.safeargs.kotlin"
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion "29.0.3"
+
+    defaultConfig {
+        applicationId "com.example.bcon"
+        minSdkVersion 17
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+        vectorDrawables.useSupportLibrary = true
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+
+    viewBinding {
+        enabled = true
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$version_kotlin"
+    implementation "androidx.constraintlayout:constraintlayout:$version_constraint_layout"
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+
+    // Timber
+    implementation 'com.jakewharton.timber:timber:4.7.1'
+
+    //Android Plot
+    implementation "com.androidplot:androidplot-core:1.5.7"
+
+    // Core with Ktx
+    implementation "androidx.core:core-ktx:$version_core"
+    implementation "androidx.fragment:fragment-ktx:1.2.3"
+
+    // Material
+    implementation "com.google.android.material:material:$version_material"
+
+    // Navigation
+    implementation "androidx.navigation:navigation-fragment:$version_navigation"
+    implementation "androidx.navigation:navigation-fragment-ktx:$version_navigation_ktx"
+    implementation "androidx.navigation:navigation-ui:$version_navigation"
+    implementation "androidx.navigation:navigation-ui-ktx:$version_navigation_ktx"
+
+    // ViewModel and LiveData
+    implementation "androidx.lifecycle:lifecycle-extensions:$version_lifecycle_extensions"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$version_lifecycle_viewmodel"
+
+    // Coroutines
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$version_kotlin_coroutines"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$version_kotlin_coroutines"
+
+    // RecyclerView
+    implementation "androidx.recyclerview:recyclerview:$version_recyclerview"
+
+    // Room database
+    implementation "androidx.room:room-runtime:$version_room"
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    kapt "androidx.room:room-compiler:$version_room"
+
+    // Gson
+    implementation "com.google.code.gson:gson:$version_gson"
+
+    // Koin for Android
+    implementation "org.koin:koin-android:$version_koin"
+    // Koin Android Scope features
+    implementation "org.koin:koin-androidx-scope:$version_koin"
+    // Koin AndroidX ViewModel features
+    implementation "org.koin:koin-androidx-viewmodel:$version_koin"
+    // Koin AndroidX Fragment features
+    implementation "org.koin:koin-androidx-fragment:$version_koin"
+
+    // Joda time library for dealing with time
+    implementation "joda-time:joda-time:$version_joda"
+
+    // Testing
+    testImplementation 'junit:junit:4.13'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+}

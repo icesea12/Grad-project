@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/bluetooth_fragment"
+    tools:ignore="UnusedNavigation">
+    <!--
+    tools:ignore="UnusedNavigation" because it shows the error despite the fact that the
+    FragmentContainerView inside main_activity does implement this navigation graph
+     -->
+
+    <fragment
+        android:id="@+id/bluetooth_fragment"
+        android:name="com.example.bcon.ui.bluetooth.BluetoothFragment"
+        android:label="@string/Bluetooth"
+        tools:layout="@layout/bluetooth_fragment" >
+        <action
+            android:id="@+id/action_bluetooth_fragment_to_logs_fragment"
+            app:destination="@id/logs_fragment"
+            app:enterAnim="@anim/slide_in_from_right"
+            app:exitAnim="@anim/slide_out_to_right"
+            app:popEnterAnim="@anim/slide_in_from_left"
+            app:popExitAnim="@anim/slide_out_to_left" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/logs_fragment"
+        android:name="com.example.bcon.ui.logs.LogsFragment"
+        android:label="@string/Logs"
+        tools:layout="@layout/logs_fragment" />
+    <fragment
+        android:id="@+id/plot_fragment"
+        android:name="com.example.bcon.ui.plot.PlotFragment"
+        android:label="plot_fragment"
+        tools:layout="@layout/plot_fragment" />
+</navigation>
